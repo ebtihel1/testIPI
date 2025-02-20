@@ -1,0 +1,17 @@
+// mixins.scss
+@use 'variables' as *; // Import des variables
+
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius; // Correctement reconnu maintenant
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
